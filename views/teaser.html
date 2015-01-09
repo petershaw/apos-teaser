@@ -1,0 +1,32 @@
+{% extends "content.html" %}
+
+{% block content %}
+   <div class="column-element apos-area-sidebar">
+		{{ aposArea(page, 'body') }}
+	</div>
+        <!-- Start Profile -->
+    	<div class="span4 profile">
+        	<div class="image-wrap">
+                <div class="hover-wrap">
+                    <span class="overlay-img"></span>
+                    <span class="overlay-text-thumb">
+						{{ item.imageTextOverlay | e }}
+                    </span>
+                </div>
+                <img src="assets/img/profile/profile-02.jpg" alt="Jane Helf">
+            </div>
+            <h3 class="profile-name">{{ item.headline | e }}</h3>
+            <p class="profile-description">
+						{{ item.teasercontent | e }}
+						
+            <div class="social">
+            	<ul class="social-icons">
+            		<!--
+                	<li><a href="#"><i class="font-icon-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="font-icon-social-email"></i></a></li>
+                    -->
+                </ul>
+            </div>
+        </div>
+        <!-- End Profile -->
+{% endblock%}

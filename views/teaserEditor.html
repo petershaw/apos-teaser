@@ -1,0 +1,30 @@
+{% extends "baseWidgetEditor.html" %}
+
+{% block modalClass %}
+  {{super()}} apos-teaser-editor
+{% endblock %}
+
+{% block modalLabel %}
+  {{ __('Create a teaser') }}
+{% endblock %}
+
+{% block modalInstructions %}
+  <p>{{ __('Configure the teaser.')}}</p>
+{% endblock %}
+
+{% block formBody %}
+  <fieldset class="apos-fieldset apos-fieldset-text">
+    <label>{{ __('Headline:') }}</label>
+    <input name="headline" class="apos-teaser-headline" />
+    <label>{{ __('Image Textoverlay:') }}</label>
+    <input name="imageTextOverlay" class="apos-teaser-headline" />
+  </fieldset>
+  <fieldset class="apos-fieldset apos-fieldset-text">
+    <label>{{ __('Content:') }}</label>
+    <textarea name="teasercontent" class="apos-input-textarea"></textarea>
+    <div data-iframe-placeholder></div>
+  </fieldset>
+  <fieldset class="apos-fieldset apos-fieldset-text">
+
+  </fieldset>
+{% endblock %}
